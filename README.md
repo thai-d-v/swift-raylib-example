@@ -3,18 +3,18 @@
 ❯ git clone https://github.com/raysan5/raylib.git Sources/raylib
 ```
 
-```shel
+```shell
 ~/Downloads/swift-raylib
 ❯ export MACOSX_DEPLOYMENT_TARGET=15.0
 ```
 
-```shel
+```shell
 ~/Downloads/swift-raylib/Sources/raylib/src
 ❯ make
 ```
 
 - create a file `module.modulemap` at `~/Downloads/swift-raylib/Sources/raylib/src` with this code
-```text
+```swift
 module Raylib {
   header "raylib.h"
   export *
@@ -38,7 +38,7 @@ CloseWindow()
 ```
 
 - compile Swift code with raylib
-```shel
+```shell
 ~/Downloads/swift-raylib 
 ❯ swiftc Sources/main.swift \
   -I Sources/raylib/src \
@@ -54,7 +54,7 @@ CloseWindow()
 ```
 
 - run
-```shel
+```shell
 ~/Downloads/swift-raylib 
 ❯ ./main
 ```
